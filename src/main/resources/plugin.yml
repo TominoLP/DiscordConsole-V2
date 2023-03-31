@@ -1,0 +1,4 @@
+name: DiscordConsole
+version: '${project.version}'
+main: de.tomino.discordconsole.DiscordConsole_v2
+api-version: 1.19
