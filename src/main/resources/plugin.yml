@@ -1,4 +1,14 @@
 name: DiscordConsole
 version: '${project.version}'
-main: de.tomino.discordconsole.DiscordConsole_v2
+main: de.tomino.discordconsole.DiscordConsole
 api-version: 1.19
+description: a plugin that lets you interact with minecraft server console
+commands:
+  toggleDC:
+    description: enables the plugin
+    permission: discordconsole.toggle
+    aliases:
+      - toggleDC
+      - tDC
+      - toggleDiscordConsole
+
