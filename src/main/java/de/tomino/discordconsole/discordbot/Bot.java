@@ -2,21 +2,15 @@ package de.tomino.discordconsole.discordbot;
 
 
 import de.tomino.discordconsole.DiscordConsole;
-import de.tomino.discordconsole.utils.Config;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
-import net.dv8tion.jda.api.events.GenericEvent;
-import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.requests.GatewayIntent;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Bot{
+public class Bot {
 
     public static ArrayList<String> QueueMes = new ArrayList<>();
     public static ArrayList<EmbedBuilder> QueueEmb = new ArrayList<>();

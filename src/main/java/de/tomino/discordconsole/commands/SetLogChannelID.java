@@ -30,7 +30,8 @@ public class SetLogChannelID implements CommandExecutor {
                     commandSender.sendMessage("§aSuccessfully set the LogChannel to " + channel.getName() + " with the ID " + channel.getId());
                     DiscordConsole.config.setGuildId(guild.getId());
                     DiscordConsole.config.setLogChannelId(strings[0]);
-                    if (DiscordConsole.botRunning) Bot.sendMessage("§aSuccessfully set the Guild to " + guild.getName() + " with the ID " + guild.getId());
+                    if (DiscordConsole.botRunning)
+                        Bot.sendMessage("§aSuccessfully set the Guild to " + guild.getName() + " with the ID " + guild.getId());
                     return true;
                 }
             }
@@ -39,4 +40,5 @@ public class SetLogChannelID implements CommandExecutor {
 
         return false;
     }
+
 }

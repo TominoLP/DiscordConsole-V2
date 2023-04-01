@@ -1,13 +1,10 @@
 package de.tomino.discordconsole.utils;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-
 import de.tomino.discordconsole.discordbot.Bot;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.yaml.snakeyaml.Yaml;
+
+import java.io.File;
+import java.io.IOException;
 
 public class Config {
 

@@ -20,16 +20,7 @@ public class StatusEmbed {
         this.embedBuilder = embedBuilder;
     }
 
-    public void start() {
-        scheduler.scheduleAtFixedRate(() -> {
-            channel.editMessageById("message_id", (CharSequence) embedBuilder.build()).queue();
-        }, 0, 10, TimeUnit.SECONDS);
-    }
-
-    public void stop() {
-        scheduler.shutdown();
-    }
-    public static void sendFirst(){
+    public static void sendFirst() {
         if (!DiscordConsole.botRunning) return;
         if (DiscordConsole.config.getStatusChannelId() == null) return;
         TextChannel channel = Bot.jda.getTextChannelById(DiscordConsole.config.getStatusChannelId());
@@ -42,6 +33,16 @@ public class StatusEmbed {
         StatusEmbed statusEmbed = new StatusEmbed(channel, embedBuilder);
         statusEmbed.start();
 
+    }
+
+    public void start() {
+        scheduler.scheduleAtFixedRate(() -> {
+            channel.editMessageById("message_id", (CharSequence) embedBuilder.build()).queue();
+        }, 0, 10, TimeUnit.SECONDS);
+    }
+
+    public void stop() {
+        scheduler.shutdown();
     }
 
 

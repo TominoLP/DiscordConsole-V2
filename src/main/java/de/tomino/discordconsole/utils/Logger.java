@@ -4,12 +4,12 @@ import de.tomino.discordconsole.DiscordConsole;
 import de.tomino.discordconsole.discordbot.Bot;
 import net.dv8tion.jda.api.JDA;
 import org.apache.logging.log4j.core.LogEvent;
+import org.apache.logging.log4j.core.appender.AbstractAppender;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.server.ServerCommandEvent;
-import org.apache.logging.log4j.core.appender.AbstractAppender;
 
 import java.util.Calendar;
 import java.util.Locale;

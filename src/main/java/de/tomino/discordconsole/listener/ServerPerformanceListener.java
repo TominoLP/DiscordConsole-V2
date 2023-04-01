@@ -10,6 +10,7 @@ public class ServerPerformanceListener {
 
     /**
      * Get the current TPS of the server.
+     *
      * @return The current TPS.
      * @see me.lucko.spark.api.Spark#tps()
      */
@@ -20,6 +21,7 @@ public class ServerPerformanceListener {
 
     /**
      * Get the current MSPT of the server.
+     *
      * @return The current MSPT.
      * @see me.lucko.spark.api.Spark#mspt()
      */
@@ -30,6 +32,7 @@ public class ServerPerformanceListener {
 
     /**
      * Get the current CPU usage of the server.
+     *
      * @return The current CPU usage.
      * @see me.lucko.spark.api.Spark#cpuSystem()
      */
@@ -40,6 +43,7 @@ public class ServerPerformanceListener {
 
     /**
      * Get the current amount of memory in use on the JVM.
+     *
      * @return The current amount converted to MB.
      */
     public String getServerMemoryUsage() {
@@ -50,6 +54,7 @@ public class ServerPerformanceListener {
 
     /**
      * Get the maximum amount of memory that the JVM will attempt to use.
+     *
      * @return The maximum amount converted to MB.
      */
     public String getServerMemoryMax() {
