@@ -4,6 +4,7 @@ main: de.tomino.discordconsole.DiscordConsole
 api-version: 1.19
 description: a plugin that lets you interact with minecraft server console
 commands:
+
   toggleDC:
     description: enables the plugin
     permission: discordconsole.toggle
@@ -11,4 +12,18 @@ commands:
       - toggleDC
       - tDC
       - toggleDiscordConsole
+
+  setLogChannel:
+    description: sets the log channel
+    permission: discordconsole.setpreferences
+    aliases:
+      - setLogChannel
+      - setLog
+
+  setToken:
+    description: sets the token
+    permission: discordconsole.setpreferences
+    aliases:
+      - setToken
+      - setBotToken
 
