@@ -4,11 +4,15 @@ package de.tomino.discordconsole;
 import de.tomino.discordconsole.commands.ToggleConsole;
 import de.tomino.discordconsole.discordbot.Bot;
 import de.tomino.discordconsole.utils.Logger;
+import me.lucko.spark.api.Spark;
+import me.lucko.spark.api.SparkProvider;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import org.apache.logging.log4j.LogManager;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.awt.*;
@@ -26,11 +30,14 @@ public final class DiscordConsole extends JavaPlugin {
     private static Plugin plugin;
     public static boolean enabled = true;
 
+    public static Spark spark;
+
     @Override
     public void onEnable() {
 
-
         plugin = this;
+        spark = SparkProvider.get();
+
         try {
             Bot.startBot();
         } catch (InterruptedException e) {
@@ -47,6 +54,7 @@ public final class DiscordConsole extends JavaPlugin {
             }
 
         }
+
         Objects.requireNonNull(getCommand("toggleDC")).setExecutor(new ToggleConsole());
 
         EmbedBuilder startEmbed = new EmbedBuilder();
